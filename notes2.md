@@ -12,7 +12,9 @@ What's the event loop?
 The core of every Qt Applications is the QApplication class. Every application needs one - and only one - QApplicaiton object to function. This object holds the event loop of your application - the core loop which governs all user interaction with the GUI.
 
 
+QMainWindow
 
+As in Qt any widgets can be windows. If you replace QtWidget with QPushButton.
 
 
 
