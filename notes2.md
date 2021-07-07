@@ -39,7 +39,9 @@ In addition to notifying about something happening, signals can also send data t
 
 Slots is the name Qt uses for the receivers of signals. In Python any function (or method) in your application can be used as a slot - simply by connecting the signal to it. If the signal sends data, then the receiving function will receive that data too. Many Qt widgets also have their own built-in slots, meaning you can hook Qt widgets together directly.
 
+### QPushButton Signals
 
+We create a simple custom slot named the_button_was_clicked which accepts the clicked signal from the QPushButton.
 
 
 
