@@ -22,9 +22,13 @@ As in Qt any widgets can be windows. If you replace QtWidget with QPushButton.
 
 Like that Qt has a very useful widget - **QMainWindow**. This is a pre-made widget which provides a lot of standard window features you'll make use of in your apps, including toolbars, menus, a statusbar, dockable widgets and more.
 
+If you want to create a custom window, the best approach is to subclass QMainWindow and then include the setup for the window in the __init__ block. This allows the window behavior to be self contained. We can add our own subclass of QMainWindow - call it MainWindow to keep things simple.
 
 
+### Sizing windows and widgets
 
+In Qt sizes are defined using a QSize object. This accepts width and height parameteres in that order. 
+As well as .setFixedSize() you can also call .setMinimumSize() and .setMaximumSize() to set the minimum and maximum sizes respectively. You can use these size methods on any widget.
 
 
 
