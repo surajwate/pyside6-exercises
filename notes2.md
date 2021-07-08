@@ -43,9 +43,14 @@ Slots is the name Qt uses for the receivers of signals. In Python any function (
 
 We create a simple custom slot named the_button_was_clicked which accepts the clicked signal from the QPushButton.
 
+#### Receiving data
 
+The signals can also send data to provide more information about what has just happened. The .clicked signal also provide a checked (or toggled) state for the button.
+Add a second slot which outputs the checkstate.
 
+#### Storing data
 
+You can store the current state of a widget in a Python variable. You can either store these values as individual variables or use a dictionary if you prefer. In example we store the checked value of our button in a variable called button_is_checked on self.
 
 
 
