@@ -61,4 +61,12 @@ Update our slot methid to modify the button, changing the text and disabling the
 
 Most widgets have their own signals - and the **QMainWindow** we're using for our window is no exception. In this example, we connect the **.windowTitleChanged** signal on the **QMainWindow** to a custom shot method the_window_title_changed. This slot also receives the new window title.
 
+The few things to notice in this example.
+
+Firstly, the **windowTitleChanged** signal is not always emitted when setting the window title. The signal only fires if the new title is changed from the precious one. If you set the same title multiple times, the signal will only be fired the first time.
+
+Secondly, notice how we are able to chanin things together using signals. One thing happening - a button press - can trigger multiple other things to happen in turn. These subsequent effects do not need to know what caused them, but simply follow as a consequence of simple rules. This decoupling of effects from their triggers is one of the concepts to understand when building GUI applications.
+
+
+
 

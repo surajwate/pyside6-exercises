@@ -40,7 +40,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle(new_window_title)
 
     def the_window_title_changed(self, window_title):
-        print("Window title changed: {window_title}")
+        print(f"Window title changed: {window_title}")
 
         if window_title == "Something went wrong":
             self.button.setDisabled(True)
