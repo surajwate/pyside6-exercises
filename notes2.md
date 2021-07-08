@@ -2,7 +2,7 @@
 
 ## My first Application
 
-The main modules of the Qt are QtWidgets, QtGui and QtCore.
+The main [modules of the Qt](https://doc.qt.io/qtforpython/modules.html) are [QtWidgets](https://doc.qt.io/qtforpython/PySide6/QtWidgets/index.html#module-PySide6.QtWidgets), [QtGui](https://doc.qt.io/qtforpython/PySide6/QtGui/index.html#module-PySide6.QtGui) and [QtCore](https://doc.qt.io/qtforpython/PySide6/QtCore/index.html#module-PySide6.QtCore).
 
 In Qt all top level widgets are windows - that is, they don't have a parent and are not nested within another widget or layout. This means you can technically create a window using any widget you like.
 
@@ -59,6 +59,6 @@ You can use this same pattern with any PySide6 widgets. If a widget does not pro
 
 Update our slot methid to modify the button, changing the text and disabling the button so it is no longer chickable. We'll also turn off the checkable state for now.
 
-
+Most widgets have their own signals - and the **QMainWindow** we're using for our window is no exception. In this example, we connect the **.windowTitleChanged** signal on the **QMainWindow** to a custom shot method the_window_title_changed. This slot also receives the new window title.
 
 
