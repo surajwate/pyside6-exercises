@@ -1,4 +1,5 @@
 # Creating gui applications with pyside6
+------------------------------------------------------------------------------------------------
 
 ## My first Application
 
@@ -29,6 +30,8 @@ If you want to create a custom window, the best approach is to subclass QMainWin
 In Qt sizes are defined using a QSize object. This accepts width and height parameteres in that order.
 As well as .setFixedSize() you can also call .setMinimumSize() and .setMaximumSize() to set the minimum and maximum sizes respectively. You can use these size methods on any widget.
 
+---------------------------------------------------------------------------------------
+
 ## Signals & Slots
 
 We need a way to connect the action of pressing the button to making something happen. In Qt, this is provided by signals and slots.
@@ -47,7 +50,7 @@ We create a simple custom slot named the_button_was_clicked which accepts the cl
 The signals can also send data to provide more information about what has just happened. The .clicked signal also provide a checked (or toggled) state for the button.
 Add a second slot which outputs the checkstate.
 
-#### Storing data
+### Storing data
 
 You can store the current state of a widget in a Python variable. You can either store these values as individual variables or use a dictionary if you prefer. In example we store the checked value of our button in a variable called button_is_checked on self.
 
@@ -55,7 +58,7 @@ You can use this same pattern with any PySide6 widgets. If a widget does not pro
 
 **.isChecked()** returns the check state of the button.
 
-#### Changing the interface
+### Changing the interface
 
 Update our slot methid to modify the button, changing the text and disabling the button so it is no longer chickable. We'll also turn off the checkable state for now.
 
@@ -67,10 +70,71 @@ Firstly, the **windowTitleChanged** signal is not always emitted when setting th
 
 Secondly, notice how we are able to chanin things together using signals. One thing happening - a button press - can trigger multiple other things to happen in turn. These subsequent effects do not need to know what caused them, but simply follow as a consequence of simple rules. This decoupling of effects from their triggers is one of the concepts to understand when building GUI applications.
 
-#### Connecting widgets together directly
+### Connecting widgets together directly
 
 When a signal is fired from the widget, our Python method is called and receives the data from the signal. But you don't always need to use a Python function to handle signals - you can also connect Qt widgets directly to one another.
 
-In the example, we add a **QLineEdit** widget and a **QLabel** to the window. In the __init__ for the window we connect our line edit **.textChanged** signal to the **.setText** method on the **QLabel**. Now any time the text changes in the **QLineEdit** the **QLabel** will receive that text to it's **.setText** method.
+In the example, we add a **QLineEdit** widget and a **QLabel** to the window. In the **init** for the window we connect our line edit **.textChanged** signal to the **.setText** method on the **QLabel**. Now any time the text changes in the **QLineEdit** the **QLabel** will receive that text to it's **.setText** method.
 
 Most Qt widgets have slots available, to which you can connect any signal that emits the same type thatt it accepts. The widget documentation has the slots for each widget listed under "Public Slots". For example, see [QLabel](https://doc.qt.io/qt-5/qlabel.html#public-slots).
+
+--------------------------------------------------------------------------------------------
+
+## Widgets
+
+In Qt widget is the name given to a component of UI that the user can interact with. User interfaces are made up of multiole widgets, arranged within the window. Qt comes with a large selection of widgets available, and even allows you to create your own custom widgets.
+
+The widgets in the widgets_list.py are as follows.
+
+| Widget  | What it does  |
+|---|---|
+| QCheckbox  | A checkbox  |
+| QComboBox  | A dropdown list box  |
+| QDateEdit  | For editing dates  |
+| QDateTimeEdit  | For editing dates and datetimes  |
+| QDial  | Rotatable dial  |
+| QDoubleSpinbox  | A number spinner for floats  |
+| QFontComboBox  | A list of fonts  |
+| QLCDNumber  | A list of fonts  |
+| QLabel  | Just a label, not interactive  |
+| QLineEdit  | Enter a line of text  |
+| QProgressBar  | A progress bar  |
+| QPushButton  | A button  |
+| QRadioButton  | A group with only one active choice  |
+| QSlider  | A slider  |
+| QSpinBox  | An integer spinner  |
+| QTimeEdit  | For editing times  |
+
+For a full list of the widgets see the [Qt documentation](https://doc.qt.io/qt-6/qtwidgets-module.html).
+
+### QLabel
+
+This is a simple one-line piece of text that you can position in your application. You can set the text by passing in a string as you create it -
+
+~~~python
+widget = QLabel("Hello")
+~~~
+
+Or, by using the .setText() method -
+
+~~~python
+widget = QLabel("1") # The label is created with the text 1
+widget.setText("2") # The label now show 2
+~~~
+
+You can also adjust font parameters, such as the size or alignment of text in the widget.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
