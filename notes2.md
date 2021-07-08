@@ -125,16 +125,31 @@ widget.setText("2") # The label now show 2
 You can also adjust font parameters, such as the size or alignment of text in the widget.
 
 
+The flags available for horizontal alignment are :-
+
+| Flag  | Behavior  |
+|---|---|
+| Qt.AlignLeft  | Aligns with the left edge.  |
+| Qt.AlignRight  | Aligns with the right edge.  |
+| Qt.AlignHCenter  | Centers horizontally in the available space.  |
+| Qt.AlignJustify  | Justifies the text in the available space.  |
+
+The flags available for vertical alignment are - 
+
+| Flag  | Behavior  |
+|---|---|
+| Qt.AlignTop  | Aligns with the top.  |
+| Qt.AlignBottom  | Aligns with the bottom.  |
+| Qt.AlignVCenter  | Centers vertically in the available space.  |
+
+The flags to centers in both directions simultaneously - 
+
+| Flag  | Behavior  |
+|---|---|
+| Qt.AlignCenter  | Centers horizontally and vertically  |
 
 
-
-
-
-
-
-
-
-
+You can also use QLabel to display an image using the .setPixmap() method. This accepts an pixmap (a pixel array), which you can create by passing an image filename to QPixmap. 
 
 
 
