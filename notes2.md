@@ -177,8 +177,9 @@ You can add items to a **QComboBox** by passing a list of strings to **.addItems
 
 The QLineEdit widget is a simple single-line text editing box, into which users can type input. 
 
+### QSpinBox and QDoubleSpinBox
 
-
+**QSpinBox** provides a small numerical input box with arrows to increase and decrease the value. **QSpinBox** supports integers while the realted widget **QDoubleSpinBox** supports floats.
 
 
 
