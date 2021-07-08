@@ -1,5 +1,6 @@
 # Creating gui applications with pyside6
-------------------------------------------------------------------------------------------------
+
+---
 
 ## My first Application
 
@@ -30,7 +31,7 @@ If you want to create a custom window, the best approach is to subclass QMainWin
 In Qt sizes are defined using a QSize object. This accepts width and height parameteres in that order.
 As well as .setFixedSize() you can also call .setMinimumSize() and .setMaximumSize() to set the minimum and maximum sizes respectively. You can use these size methods on any widget.
 
----------------------------------------------------------------------------------------
+---
 
 ## Signals & Slots
 
@@ -78,7 +79,7 @@ In the example, we add a **QLineEdit** widget and a **QLabel** to the window. In
 
 Most Qt widgets have slots available, to which you can connect any signal that emits the same type thatt it accepts. The widget documentation has the slots for each widget listed under "Public Slots". For example, see [QLabel](https://doc.qt.io/qt-5/qlabel.html#public-slots).
 
---------------------------------------------------------------------------------------------
+---
 
 ## Widgets
 
@@ -86,24 +87,24 @@ In Qt widget is the name given to a component of UI that the user can interact w
 
 The widgets in the widgets_list.py are as follows.
 
-| Widget  | What it does  |
-|---|---|
-| QCheckbox  | A checkbox  |
-| QComboBox  | A dropdown list box  |
-| QDateEdit  | For editing dates  |
-| QDateTimeEdit  | For editing dates and datetimes  |
-| QDial  | Rotatable dial  |
-| QDoubleSpinbox  | A number spinner for floats  |
-| QFontComboBox  | A list of fonts  |
-| QLCDNumber  | A list of fonts  |
-| QLabel  | Just a label, not interactive  |
-| QLineEdit  | Enter a line of text  |
-| QProgressBar  | A progress bar  |
-| QPushButton  | A button  |
-| QRadioButton  | A group with only one active choice  |
-| QSlider  | A slider  |
-| QSpinBox  | An integer spinner  |
-| QTimeEdit  | For editing times  |
+| Widget         | What it does                        |
+| -------------- | ----------------------------------- |
+| QCheckbox      | A checkbox                          |
+| QComboBox      | A dropdown list box                 |
+| QDateEdit      | For editing dates                   |
+| QDateTimeEdit  | For editing dates and datetimes     |
+| QDial          | Rotatable dial                      |
+| QDoubleSpinbox | A number spinner for floats         |
+| QFontComboBox  | A list of fonts                     |
+| QLCDNumber     | A list of fonts                     |
+| QLabel         | Just a label, not interactive       |
+| QLineEdit      | Enter a line of text                |
+| QProgressBar   | A progress bar                      |
+| QPushButton    | A button                            |
+| QRadioButton   | A group with only one active choice |
+| QSlider        | A slider                            |
+| QSpinBox       | An integer spinner                  |
+| QTimeEdit      | For editing times                   |
 
 For a full list of the widgets see the [Qt documentation](https://doc.qt.io/qt-6/qtwidgets-module.html).
 
@@ -111,55 +112,53 @@ For a full list of the widgets see the [Qt documentation](https://doc.qt.io/qt-6
 
 This is a simple one-line piece of text that you can position in your application. You can set the text by passing in a string as you create it -
 
-~~~python
+```python
 widget = QLabel("Hello")
-~~~
+```
 
 Or, by using the .setText() method -
 
-~~~python
+```python
 widget = QLabel("1") # The label is created with the text 1
 widget.setText("2") # The label now show 2
-~~~
+```
 
 You can also adjust font parameters, such as the size or alignment of text in the widget.
 
-
 The flags available for horizontal alignment are :-
 
-| Flag  | Behavior  |
-|---|---|
-| Qt.AlignLeft  | Aligns with the left edge.  |
-| Qt.AlignRight  | Aligns with the right edge.  |
-| Qt.AlignHCenter  | Centers horizontally in the available space.  |
-| Qt.AlignJustify  | Justifies the text in the available space.  |
+| Flag            | Behavior                                     |
+| --------------- | -------------------------------------------- |
+| Qt.AlignLeft    | Aligns with the left edge.                   |
+| Qt.AlignRight   | Aligns with the right edge.                  |
+| Qt.AlignHCenter | Centers horizontally in the available space. |
+| Qt.AlignJustify | Justifies the text in the available space.   |
 
-The flags available for vertical alignment are - 
+The flags available for vertical alignment are -
 
-| Flag  | Behavior  |
-|---|---|
-| Qt.AlignTop  | Aligns with the top.  |
-| Qt.AlignBottom  | Aligns with the bottom.  |
-| Qt.AlignVCenter  | Centers vertically in the available space.  |
+| Flag            | Behavior                                   |
+| --------------- | ------------------------------------------ |
+| Qt.AlignTop     | Aligns with the top.                       |
+| Qt.AlignBottom  | Aligns with the bottom.                    |
+| Qt.AlignVCenter | Centers vertically in the available space. |
 
-The flags to centers in both directions simultaneously - 
+The flags to centers in both directions simultaneously -
 
-| Flag  | Behavior  |
-|---|---|
-| Qt.AlignCenter  | Centers horizontally and vertically  |
+| Flag           | Behavior                            |
+| -------------- | ----------------------------------- |
+| Qt.AlignCenter | Centers horizontally and vertically |
 
-
-You can also use QLabel to display an image using the .setPixmap() method. This accepts an pixmap (a pixel array), which you can create by passing an image filename to QPixmap. 
+You can also use QLabel to display an image using the .setPixmap() method. This accepts an pixmap (a pixel array), which you can create by passing an image filename to QPixmap.
 
 ### [QCheckBox](https://github.com/surajwate/pyside6-exercises/blob/d7409e565da967c24f8708b21498ef62aa8a06e0/Widgets/check_box_widget.py)
 
-You can set a checkbox state programmatically using **.setChecked** or **.setCheckState**. The former accepts either **True** or **False** representing cehcked or unchecked respectively. However, with **.setCheckState** you also specify a partially checked state using a **Qt**. namespace flag - 
+You can set a checkbox state programmatically using **.setChecked** or **.setCheckState**. The former accepts either **True** or **False** representing cehcked or unchecked respectively. However, with **.setCheckState** you also specify a partially checked state using a **Qt**. namespace flag -
 
-| Flag  | Behavior  |
-|---|---|
-| Qt.Checked  | Item is checked  |
-| Qt.Unchecked  | Item is unchecked  |
-| Qt.PartiallyChecked  | Item is partially checked  |
+| Flag                | Behavior                  |
+| ------------------- | ------------------------- |
+| Qt.Checked          | Item is checked           |
+| Qt.Unchecked        | Item is unchecked         |
+| Qt.PartiallyChecked | Item is partially checked |
 
 You may notice that when the script is running the current state number is displayed as an int with checked = 2, unchecked = 0, and partially checked = 1. You don't need to remember these values - they are just the internal value of these respective flags. You can test state using state == **Qt.Checked**.
 
@@ -175,17 +174,34 @@ You can add items to a **QComboBox** by passing a list of strings to **.addItems
 
 ### QLineEdit
 
-The QLineEdit widget is a simple single-line text editing box, into which users can type input. 
+The QLineEdit widget is a simple single-line text editing box, into which users can type input.
 
 ### QSpinBox and QDoubleSpinBox
 
 **QSpinBox** provides a small numerical input box with arrows to increase and decrease the value. **QSpinBox** supports integers while the realted widget **QDoubleSpinBox** supports floats.
 
-## QSlider
+### QSlider
 
 QSlider provides a slide-bar widget, which functions internally much like a QDoubleSpinBox. Rather than display the current value numerically, it is represented by the position of the slider handle along the length of the widget.
 
 There is an .sliderMoved signal that is triggered whenever the slider moves position and a .sliderPressed signal that emits whenever the slider is clicked.
+
+### QDial
+
+The QDial is a rotatable widget that functions just like the slider, but appears as an analogue dial.
+
+
+## Layouts
+
+
+
+
+
+
+
+
+
+
 
 
 
