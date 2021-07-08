@@ -151,5 +151,47 @@ The flags to centers in both directions simultaneously -
 
 You can also use QLabel to display an image using the .setPixmap() method. This accepts an pixmap (a pixel array), which you can create by passing an image filename to QPixmap. 
 
+### QCheckBox
+
+You can set a checkbox state programmatically using **.setChecked** or **.setCheckState**. The former accepts either **True** or **False** representing cehcked or unchecked respectively. However, with **.setCheckState** you also specify a partially checked state using a **Qt**. namespace flag - 
+
+| Flag  | Behavior  |
+|---|---|
+| Qt.Checked  | Item is checked  |
+| Qt.Unchecked  | Item is unchecked  |
+| Qt.PartiallyChecked  | Item is partially checked  |
+
+You may notice that when the script is running the current state number is displayed as an int with checked = 2, unchecked = 0, and partially checked = 1. You don't need to remember these values - they are just the internal value of these respective flags. You can test state using state == **Qt.Checked**.
+
+### QComboBox
+
+The QComboBox is a drop down list, closed by default with an arrow to open it. You can select a single item from the list, with the currently selected iten being shown as a label on the widget. The combo box is suited to selection of a choice from a long list of options.
+
+You can add items to a **QComboBox** by passing a list of strings to **.addItems()**. Items will be added in the order they are provided.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
