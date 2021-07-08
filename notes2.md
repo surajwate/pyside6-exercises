@@ -151,7 +151,7 @@ The flags to centers in both directions simultaneously -
 
 You can also use QLabel to display an image using the .setPixmap() method. This accepts an pixmap (a pixel array), which you can create by passing an image filename to QPixmap. 
 
-### QCheckBox
+### [QCheckBox](https://github.com/surajwate/pyside6-exercises/blob/d7409e565da967c24f8708b21498ef62aa8a06e0/Widgets/check_box_widget.py)
 
 You can set a checkbox state programmatically using **.setChecked** or **.setCheckState**. The former accepts either **True** or **False** representing cehcked or unchecked respectively. However, with **.setCheckState** you also specify a partially checked state using a **Qt**. namespace flag - 
 
@@ -163,11 +163,15 @@ You can set a checkbox state programmatically using **.setChecked** or **.setChe
 
 You may notice that when the script is running the current state number is displayed as an int with checked = 2, unchecked = 0, and partially checked = 1. You don't need to remember these values - they are just the internal value of these respective flags. You can test state using state == **Qt.Checked**.
 
-### QComboBox
+### [QComboBox](https://github.com/surajwate/pyside6-exercises/blob/d7409e565da967c24f8708b21498ef62aa8a06e0/Widgets/combo_box_widget.py)
 
 The QComboBox is a drop down list, closed by default with an arrow to open it. You can select a single item from the list, with the currently selected iten being shown as a label on the widget. The combo box is suited to selection of a choice from a long list of options.
 
 You can add items to a **QComboBox** by passing a list of strings to **.addItems()**. Items will be added in the order they are provided.
+
+### QListWidget
+
+**QListWidget** is similar to **QComboBox**, except options are presented as a scrollable list of items. It also supports selection of multiple items at once. A QListWidget offers an currentItemChanged signal which sends the QListItem (the element of the list widget), and a currentTextChanged signal which sends the text of the current item.
 
 
 
