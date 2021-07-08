@@ -55,7 +55,9 @@ You can use this same pattern with any PySide6 widgets. If a widget does not pro
 
 **.isChecked()** returns the check state of the button.
 
+#### Changing the interface
 
+Update our slot methid to modify the button, changing the text and disabling the button so it is no longer chickable. We'll also turn off the checkable state for now.
 
 
 
