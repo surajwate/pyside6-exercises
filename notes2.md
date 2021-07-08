@@ -173,7 +173,9 @@ You can add items to a **QComboBox** by passing a list of strings to **.addItems
 
 **QListWidget** is similar to **QComboBox**, except options are presented as a scrollable list of items. It also supports selection of multiple items at once. A QListWidget offers an currentItemChanged signal which sends the QListItem (the element of the list widget), and a currentTextChanged signal which sends the text of the current item.
 
+### QLineEdit
 
+The QLineEdit widget is a simple single-line text editing box, into which users can type input. 
 
 
 
