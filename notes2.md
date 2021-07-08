@@ -67,6 +67,10 @@ Firstly, the **windowTitleChanged** signal is not always emitted when setting th
 
 Secondly, notice how we are able to chanin things together using signals. One thing happening - a button press - can trigger multiple other things to happen in turn. These subsequent effects do not need to know what caused them, but simply follow as a consequence of simple rules. This decoupling of effects from their triggers is one of the concepts to understand when building GUI applications.
 
+#### Connecting widgets together directly
 
+When a signal is fired from the widget, our Python method is called and receives the data from the signal. But you don't always need to use a Python function to handle signals - you can also connect Qt widgets directly to one another.
 
+In the example, we add a **QLineEdit** widget and a **QLabel** to the window. In the __init__ for the window we connect our line edit **.textChanged** signal to the **.setText** method on the **QLabel**. Now any time the text changes in the **QLineEdit** the **QLabel** will receive that text to it's **.setText** method.
 
+Most Qt widgets have slots available, to which you can connect any signal that emits the same type thatt it accepts. The widget documentation has the slots for each widget listed under "Public Slots". For example, see [QLabel](https://doc.qt.io/qt-5/qlabel.html#public-slots).
