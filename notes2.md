@@ -181,7 +181,11 @@ The QLineEdit widget is a simple single-line text editing box, into which users 
 
 **QSpinBox** provides a small numerical input box with arrows to increase and decrease the value. **QSpinBox** supports integers while the realted widget **QDoubleSpinBox** supports floats.
 
+## QSlider
 
+QSlider provides a slide-bar widget, which functions internally much like a QDoubleSpinBox. Rather than display the current value numerically, it is represented by the position of the slider handle along the length of the widget.
+
+There is an .sliderMoved signal that is triggered whenever the slider moves position and a .sliderPressed signal that emits whenever the slider is clicked.
 
 
 
